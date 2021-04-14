@@ -16,7 +16,7 @@
   \******************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\nvar App_1 = __webpack_require__(/*! ./components/App */ \"./client/src/components/App.tsx\");\nReactDOM.render(React.createElement(App_1.App, { userName: \"andy\", lang: \"typescript\" }), document.getElementById('app'));\n\n\n//# sourceURL=webpack://typescripttut/./client/src/Index.tsx?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\nvar App_1 = __webpack_require__(/*! ./components/App */ \"./client/src/components/App.tsx\");\nReactDOM.render(React.createElement(App_1.App, { userName: \"Andy\", lang: \"typescript\" }), document.getElementById('app'));\n\n\n//# sourceURL=webpack://typescripttut/./client/src/Index.tsx?");
 
 /***/ }),
 
@@ -26,7 +26,27 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
   \***************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.App = void 0;\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nexports.App = function (props) {\n    return (React.createElement(\"div\", null,\n        \"Hi \",\n        props.userName,\n        \" from React! Welcome to \",\n        props.lang,\n        \"!\"));\n};\n\n\n//# sourceURL=webpack://typescripttut/./client/src/components/App.tsx?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.App = void 0;\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar GroceryList_1 = __webpack_require__(/*! ./GroceryList */ \"./client/src/components/GroceryList.tsx\");\nexports.App = function (props) {\n    return (React.createElement(\"div\", null,\n        \"Hi \",\n        props.userName,\n        \" from React! Welcome to \",\n        props.lang,\n        \"!\",\n        React.createElement(GroceryList_1.GroceryList, null)));\n};\n\n\n//# sourceURL=webpack://typescripttut/./client/src/components/App.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/GroceryList.tsx":
+/*!***********************************************!*\
+  !*** ./client/src/components/GroceryList.tsx ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.GroceryList = void 0;\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar groceries_model_1 = __webpack_require__(/*! ../model/groceries.model */ \"./client/src/model/groceries.model.ts\");\nexports.GroceryList = function () {\n    var item1 = new groceries_model_1.Groceries({\n        itemName: \"Meat\",\n        quantity: 4,\n        price: 20,\n    });\n    var item2 = new groceries_model_1.Groceries({\n        itemName: \"Veggies\",\n        quantity: 2,\n        price: 16.50,\n    });\n    var item3 = new groceries_model_1.Groceries({\n        itemName: \"Milk\",\n        quantity: 1,\n        price: 4.50,\n    });\n    return React.createElement(\"div\", null,\n        React.createElement(\"li\", null,\n            item1.itemName,\n            \" - \",\n            item1.quantity,\n            \" - $\",\n            item1.getTotalPrice(item1.quantity, item1.price)),\n        React.createElement(\"li\", null,\n            item2.itemName,\n            \" - \",\n            item2.quantity,\n            \" - $\",\n            item2.getTotalPrice(item2.quantity, item2.price)),\n        React.createElement(\"li\", null,\n            item3.itemName,\n            \" - \",\n            item3.quantity,\n            \" - $\",\n            item3.getTotalPrice(item3.quantity, item3.price)));\n};\n\n\n//# sourceURL=webpack://typescripttut/./client/src/components/GroceryList.tsx?");
+
+/***/ }),
+
+/***/ "./client/src/model/groceries.model.ts":
+/*!*********************************************!*\
+  !*** ./client/src/model/groceries.model.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.Groceries = void 0;\nvar Groceries = (function () {\n    function Groceries(data) {\n        this.getTotalPrice = function (quantity, price) {\n            var total = quantity * price;\n            return total;\n        };\n        this.itemName = data.itemName;\n        this.quantity = data.quantity;\n        this.price = data.price;\n    }\n    return Groceries;\n}());\nexports.Groceries = Groceries;\n\n\n//# sourceURL=webpack://typescripttut/./client/src/model/groceries.model.ts?");
 
 /***/ }),
 
