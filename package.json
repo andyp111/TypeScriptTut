@@ -1,0 +1,45 @@
+{
+  "name": "typescripttut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/app.js",
+    "build": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyp111/TypeScriptTut.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyp111/TypeScriptTut/issues"
+  },
+  "homepage": "https://github.com/andyp111/TypeScriptTut#readme",
+  "dependencies": {
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.37",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^5.2.1",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.4.1",
+    "source-map-loader": "^2.0.1",
+    "typescript": "^3.9.9",
+    "webpack": "^5.32.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
