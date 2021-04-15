@@ -28,6 +28,13 @@ export const App: FC = () => {
         setTask('');
         setDeadline(0)
     }
+
+    const completeTask = (taskNameToDelete: string): void => {
+        setTodoList(todoList.filter((task) => {
+            return task.taskName !== taskNameToDelete;
+        }))
+    }
+
     return (
         <div className="app">
             <div className="header"></div>
@@ -47,10 +54,10 @@ export const App: FC = () => {
                     onChange={handleChange}
                 />
             </div>
-            <button>Add Task</button>
+            <button onClick={addTask}>Add Task</button>
             <div className="todoList">
                 {todoList.map((task: ITask, key: number) => {
-                    return <TodoTask key={key} task={task}/>
+                    return <TodoTask key={key} task={task} completeTask={completeTask}/>
                 })}
             </div>
         </div>
