@@ -21,7 +21,7 @@ export const GroceryList = () => {
         price: 4.50,
     })
 
-    const [newItem, getNewItem] = useState(new Groceries());
+    // const [newItem, getNewItem] = useState(new Groceries());
     const [wantToAddItem, setWantToAddItem] = useState(false)
 
     return <div>
@@ -35,5 +35,5 @@ export const GroceryList = () => {
                 </div>
             </form>
         </div>
-    </div>;
+    </div>
 };
