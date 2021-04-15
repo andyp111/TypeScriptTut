@@ -1,3 +1,4 @@
+import { stringify } from 'node:querystring';
 import * as React from 'React';
 import { useState } from "react";
 import { Groceries } from "../model/groceries.model";
@@ -24,14 +25,14 @@ export const GroceryItems = () => {
 
     // const [newItem, getNewItem] = useState(new Groceries());
     const [wantToAddItem, setWantToAddItem] = useState(false)
-    
+
     const [values, setValues] = useState({
         itemName: '',
         quantity: 0,
         price: 0
     })
 
-    const handleSubmit = (event:any) => {
+    const handleSubmit = (event: any): void => {
         event.preventDefault();
         setValues((values) => ({
             ...values,
